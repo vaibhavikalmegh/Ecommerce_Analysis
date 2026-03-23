@@ -8,16 +8,16 @@ An end-to-end data analytics project that analyzes e-commerce sales data to gene
 
 ### Sales Overview
 <p align="center">
-  <img src="docs/Dashboard1.png" width="900"/>
+  <img src="Docs/Dashboard1.png" width="900"/>
 </p>
 
 <p align="center">
-  <img src="docs/Dashboard2.png" width="900"/>
+  <img src="Docs/Dashboard2.png" width="900"/>
 </p>
 
 ### Product Analysis
 <p align="center">
-  <img src="docs/Dashboard3.png" width="900"/>
+  <img src="Docs/Dashboard3.png" width="900"/>
 </p>
 
 ---
