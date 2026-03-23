@@ -1,168 +1,259 @@
-🔷 E-Commerce Sales Analytics Dashboard
-End-to-End Data Analytics Project (SQL + Python + Power BI + Machine Learning)
+# E-Commerce Sales Analytics Dashboard
 
-🔷 Dashboard Preview
-![Dashboard](Dashboard1.png)
-![Dashboard](Dashboard2.png)
-![Dashboard](Dashboard3.png)
+An end-to-end data analytics project that analyzes e-commerce sales data to generate business insights and build a predictive model for return analysis. The project integrates SQL, Python, and Power BI to deliver both analytical and machine learning solutions.
 
-🔷 Problem Statement
-The objective of this project is to analyze e-commerce sales data to uncover key business insights related to revenue, customer behavior, product performance, and returns. The goal is to support data-driven decision-making for improving profitability and operational efficiency.
-Additionally, a predictive model is developed to identify the likelihood of order returns, enabling proactive business strategies.
+---
 
-🔷 Dataset Description
-The dataset contains transactional sales data with the following key attributes:
-Customer_ID
-Gender
-Region
-Age
-Product_Name
-Category
-Unit_Price
-Quantity
-Total_Price
-Shipping_Fee
-Shipping_Status
-Order_Date
+## Dashboard Preview
 
-🔷Additional Features Engineered:
-Order Year
-Order Month
-Order Month Number
-Order Value Segment (Low / Medium / High)
-Returned (Target Variable for Machine Learning)
+### Sales Overview
+<p align="center">
+  <img src="docs/Dashboard1.png" width="900"/>
+</p>
 
-🔷 Tools & Technologies Used
-Excel → Data cleaning, preprocessing, and initial exploration
-SQL (MySQL) → Data analysis, aggregations, KPI calculations
-Python (Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn) → Exploratory Data Analysis & Predictive Modeling
-Power BI → Interactive dashboard and data visualization
+<p align="center">
+  <img src="docs/Dashboard2.png" width="900"/>
+</p>
 
-🔷 Exploratory Data Analysis (Python)
-Converted Order Date into datetime format for time-based analysis
-Removed 'In Transit' records to focus on final delivery outcomes
-Created binary target variable:
-Returned = 1 → Returned
-Returned = 0 → Delivered
+### Product Analysis
+<p align="center">
+  <img src="docs/Dashboard3.png" width="900"/>
+</p>
 
-📊 Key EDA Insights:
-Category vs Returns
--->Certain categories show significantly higher return behavior
+---
 
-Region vs Returns
--->Returns are unevenly distributed across regions
+## Problem Statement
 
-Price vs Returns
--->Higher-priced products tend to have higher return variability
+The objective of this project is to analyze e-commerce sales data to uncover key insights related to revenue, customer behavior, product performance, and returns. The goal is to support data-driven decision-making for improving profitability and operational efficiency.
 
-Class Distribution
--->Imbalance observed between returned and non-returned orders
+Additionally, a machine learning model is developed to predict the likelihood of order returns, enabling proactive business strategies.
 
-🔷 Predictive Modeling (Return Prediction)
-Objective:
-Predict whether an order will be returned or not
-Model Used: Logistic Regression
+---
 
-Why Logistic Regression?
-Suitable for binary classification (Returned vs Not Returned)
-Easy to interpret using coefficients
-Fast and efficient baseline model
+## Dataset Description
 
-Steps:
-Feature selection:
-Quantity
-Total Price
-Age
-Shipping Fee
-Categorical encoding:
-Category
-Region (One-Hot Encoding)
-Data standardization using StandardScaler
-Train-test split (80/20)
+The dataset contains transactional sales data with the following attributes:
 
-🔷Model Evaluation:
-Accuracy Score
-Confusion Matrix
-Classification Report (Precision, Recall, F1-score)
-ROC Curve & AUC Score
+* Customer_ID
+* Gender
+* Region
+* Age
+* Product_Name
+* Category
+* Unit_Price
+* Quantity
+* Total_Price
+* Shipping_Fee
+* Shipping_Status
+* Order_Date
 
-🔷Feature Importance:
-Identified key drivers influencing returns using model coefficients
+### Additional Features Engineered
 
-🔷Outcome: 
-Model helps identify high-risk orders
-Enables businesses to take preventive actions to reduce returns
+* Order Year
+* Order Month
+* Order Month Number
+* Order Value Segment (Low / Medium / High)
+* Returned (Target variable for machine learning)
 
-🔷 Dashboard Overview
+---
+
+## Tools and Technologies Used
+
+**Excel**
+
+* Data cleaning and preprocessing
+* Initial exploration
+
+**SQL (MySQL)**
+
+* Data transformation
+* KPI calculations
+* Aggregations and analysis
+
+**Python**
+
+* Pandas, NumPy for data handling
+* Seaborn, Matplotlib for visualization
+* Scikit-learn for machine learning
+
+**Power BI**
+
+* Interactive dashboard creation
+* Business insights visualization
+
+---
+
+## Exploratory Data Analysis (Python)
+
+* Converted Order Date into datetime format
+* Removed 'In Transit' records to focus on completed outcomes
+* Created binary target variable:
+
+  * Returned = 1 (Returned)
+  * Returned = 0 (Delivered)
+
+### Key Observations
+
+* Certain product categories show higher return rates
+* Returns vary significantly across regions
+* Higher-priced products show more variability in returns
+* Dataset shows class imbalance in return behavior
+
+---
+
+## Predictive Modeling (Return Prediction)
+
+### Objective
+
+Predict whether an order will be returned or not.
+
+### Model Used
+
+Logistic Regression
+
+### Reason for Choosing Logistic Regression
+
+* Suitable for binary classification problems
+* Interpretable model using coefficients
+* Efficient baseline model
+
+### Steps Performed
+
+* Selected features: Quantity, Total Price, Age, Shipping Fee
+* Applied one-hot encoding on Category and Region
+* Standardized features using StandardScaler
+* Split data into training and testing sets (80/20)
+
+### Model Evaluation
+
+* Accuracy Score
+* Confusion Matrix
+* Classification Report
+* ROC Curve and AUC Score
+
+### Outcome
+
+* Identified key factors influencing returns
+* Model helps detect high-risk orders
+* Can support strategies to reduce return rates
+
+---
+
+## Dashboard Overview
+
 The Power BI dashboard includes:
-KPI Cards: Revenue, Orders, Customers, AOV, Return Rate
-Revenue Trend (Monthly)
-Revenue by Region
-Revenue by Product
-Category-wise Revenue Distribution
-Customer Segmentation
-Drill-through Product Analysis
-Tooltip-based Insights
-Profitability Analysis Page
 
-🔷 Key Insights
-📌Revenue Concentration
-Laptop category contributes ~52% of total revenue
-High dependency on a single product category
+* KPI cards (Revenue, Orders, Customers, AOV, Return Rate)
+* Monthly revenue trend
+* Revenue by region
+* Revenue by product
+* Category-wise distribution
+* Customer segmentation
+* Drill-through analysis
+* Profitability analysis
 
-📌 Regional Performance
-West region generates highest revenue
-North region has highest Average Order Value (AOV)
-South region shows lower spending behavior
+---
 
-📌 Customer Behavior
-Majority of customers fall in Low Value segment
-Small group of high-value customers contributes significantly
+## Key Insights
 
-📌 Return Analysis
-Return rate is high (~30.8%)
-Products like Monitor and Laptop have higher return counts
-Returns are concentrated in specific regions
+### Revenue Analysis
 
-📌 Seasonality
-Peak sales observed in January and November
-Lower sales in February and March
+* Laptop category contributes approximately 52% of total revenue
+* High dependency on a single category
 
-🔷 Business Recommendations
-📌Reduce Return Rate
-Investigate high-return products
-Improve product quality and descriptions
-Use predictive model to flag high-risk orders
+### Regional Analysis
 
-📌Diversify Revenue Streams
-Reduce dependency on Laptop category
-Promote accessories and other categories
+* West region generates the highest revenue
+* North region has the highest average order value
+* South region shows lower spending patterns
 
-📌Target High-Value Customers
-Introduce loyalty programs
-Personalized marketing campaigns
+### Customer Analysis
 
-📌Improve Low-Performing Regions
-Focus marketing efforts in South region
-Introduce region-specific offers
+* Majority of customers fall in the low-value segment
+* A small group of high-value customers contributes significantly
 
-📌Leverage Seasonal Trends
-Increase promotions during low months
-Maximize sales during peak periods
+### Return Analysis
 
-🚀 How to Run the Project
-Clone the repository
-Install dependencies:
+* Return rate is approximately 30.8%
+* Products like Monitor and Laptop have higher returns
+* Returns are concentrated in specific regions
+
+### Seasonality
+
+* Peak sales observed in January and November
+* Lower sales observed in February and March
+
+---
+
+## Business Recommendations
+
+### Reduce Return Rate
+
+* Investigate high-return products
+* Improve product descriptions and quality
+* Use predictive model to identify high-risk orders
+
+### Diversify Revenue
+
+* Reduce reliance on laptop category
+* Promote other product categories
+
+### Customer Strategy
+
+* Target high-value customers with loyalty programs
+* Implement personalized marketing
+
+### Regional Strategy
+
+* Focus on improving performance in low-performing regions
+* Introduce region-specific campaigns
+
+### Seasonal Strategy
+
+* Increase promotions during low-demand months
+* Maximize sales during peak periods
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-link>
+cd project-1-ecommerce-dashboard
+```
+
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Run SQL scripts from:
-data_cleaning.sql
-kpi_calculations.sql
-analysis_queries.sql
-Open notebooks/eda_analysis.ipynb for EDA & ML
-Run python_scripts/model_training.py for model training
-Open .pbix file in Power BI to view dashboard
+```
 
-📁 Project Structure
+### 3. Run SQL Analysis
+
+Execute queries from:
+
+* data_cleaning.sql
+* kpi_calculations.sql
+* analysis_queries.sql
+
+### 4. Run Python Analysis
+
+```bash
+cd python_scripts
+python model_training.py
+```
+
+### 5. Open Dashboard
+
+Open the Power BI file from the dashboards folder.
+
+---
+
+## Project Structure
+
+```
 project-1-ecommerce-dashboard/
 ├── README.md
 ├── data/
@@ -172,12 +263,19 @@ project-1-ecommerce-dashboard/
 ├── python_scripts/
 ├── docs/
 └── requirements.txt
+```
 
-⚠️ Challenges Faced
-Handling class imbalance in return prediction
-Cleaning inconsistent column names and formats
-Encoding categorical variables for modeling
-Removing incomplete order states (In Transit)
+---
 
-🏁 Conclusion
-This project demonstrates an end-to-end data analytics workflow, combining SQL, Python, and Power BI to generate actionable business insights and build a predictive model for return optimization.
+## Challenges Faced
+
+* Handling class imbalance in return prediction
+* Cleaning inconsistent column names
+* Encoding categorical variables
+* Removing incomplete order states
+
+---
+
+## Conclusion
+
+This project demonstrates a complete data analytics workflow, combining SQL, Python, and Power BI to generate actionable insights and build a predictive model for return optimization.
