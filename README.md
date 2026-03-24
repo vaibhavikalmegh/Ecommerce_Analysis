@@ -29,7 +29,7 @@ The objective of this project is to analyze e-commerce sales data to uncover key
 Additionally, a machine learning model is developed to predict the likelihood of order returns, enabling proactive business strategies.
 
 ---
-
+## Dataset Source: https://www.kaggle.com/datasets/refiaozturk/e-commerce-sales
 ## Dataset Description
 
 The dataset contains transactional sales data with the following attributes:
